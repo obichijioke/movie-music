@@ -6,6 +6,7 @@ import ReactStars from "react-rating-stars-component";
 import SimilarMovies from "../components/movie/SimilarMovies";
 import Credits from "../components/movie/Credits";
 import { Tab } from "@headlessui/react";
+import VideoPlayer from "../components/movie/VideoPlayer";
 
 const MovieDetails = () => {
   const params = useParams();
@@ -90,6 +91,7 @@ const MovieDetails = () => {
                   <SimilarMovies id={movieDetails?.id} />
                 </div>
               </div>
+              <VideoPlayer />
             </div>
             <div className="w-2/5 z-40 pl-12 relative top-[360px]">
               <Tab.Group>
