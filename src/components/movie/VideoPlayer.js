@@ -9,6 +9,7 @@ import { findDOMNode } from "react-dom";
 
 const VideoPlayer = ({ height, width, videopath }) => {
   const videoPlayerRef = useRef(null);
+  const newRef = useRef(null);
   const theme = useTheme();
   const [position, setPosition] = useState(0);
   const [seeking, setSeeking] = useState(false);
@@ -24,7 +25,7 @@ const VideoPlayer = ({ height, width, videopath }) => {
   };
 
   const handleClickFullscreen = () => {
-    screenfull.request(findDOMNode(videoPlayerRef));
+    screenfull.toggle(findDOMNode(newRef.current));
   };
 
   const handleSeeking = (value) => {
@@ -32,7 +33,10 @@ const VideoPlayer = ({ height, width, videopath }) => {
     videoPlayerRef.current.seekTo(parseFloat(value));
   };
   return (
-    <div className="relative rounded-lg overflow-hidden">
+    <div
+      className="relative rounded-lg overflow-hidden w-full h-[600px]"
+      ref={newRef}
+    >
       <ReactPlayer
         ref={videoPlayerRef}
         playing={isPlaying}
@@ -172,7 +176,7 @@ const VideoPlayer = ({ height, width, videopath }) => {
 };
 
 VideoPlayer.defaultProps = {
-  height: "600px",
+  height: "100%",
   width: "100%",
 };
 export default VideoPlayer;

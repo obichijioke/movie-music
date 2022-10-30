@@ -5,8 +5,10 @@ import WithNavs from "../components/layout/WithNavs";
 import ReactStars from "react-rating-stars-component";
 import SimilarMovies from "../components/movie/SimilarMovies";
 import Credits from "../components/movie/Credits";
+import CastList from "../components/movie/CastList";
 import { Tab } from "@headlessui/react";
 import VideoPlayer from "../components/movie/VideoPlayer";
+import MovieImages from "../components/movie/MovieImages";
 
 const MovieDetails = () => {
   const params = useParams();
@@ -36,7 +38,7 @@ const MovieDetails = () => {
           <div className="w-full h-full absolute top-0 left-0 bg-[#191a1e59] z-20"></div>
           <div className="w-full h-full absolute top-80 left-0 rounded-t-xl bg-[#191a1e] z-30"></div>
           <div className="w-full flex px-16">
-            <div className="z-40 pt-20 w-3/5">
+            <div className="z-40 pt-20 w-3/4">
               <div className="flex relative">
                 <img
                   src={`https://image.tmdb.org/t/p/w500${movieDetails?.poster_path}`}
@@ -81,7 +83,7 @@ const MovieDetails = () => {
                     Movie Cast
                   </p>
                   <ul>
-                    <Credits id={movieDetails?.id} />
+                    <CastList id={movieDetails?.id} />
                   </ul>
                 </div>
                 <div className="w-3/4 pl-10">
@@ -91,9 +93,11 @@ const MovieDetails = () => {
                   <SimilarMovies id={movieDetails?.id} />
                 </div>
               </div>
-              <VideoPlayer />
+              <div className="my-8">
+                <VideoPlayer />
+              </div>
             </div>
-            <div className="w-2/5 z-40 pl-12 relative top-[360px]">
+            <div className="w-1/4 z-40 pl-12 relative top-[360px]">
               <Tab.Group>
                 <Tab.List>
                   <Tab>
@@ -113,11 +117,18 @@ const MovieDetails = () => {
                   </Tab>
                 </Tab.List>
                 <Tab.Panels>
-                  <Tab.Panel>Content 1</Tab.Panel>
+                  <Tab.Panel>
+                    <div className="">
+                      <MovieImages id={movieDetails?.id} />
+                    </div>
+                  </Tab.Panel>
                   <Tab.Panel>Content 2</Tab.Panel>
                   <Tab.Panel>Content 3</Tab.Panel>
                 </Tab.Panels>
               </Tab.Group>
+              <div className="my-8">
+                <CastList id={movieDetails?.id} image={true} />
+              </div>
             </div>
           </div>
         </div>

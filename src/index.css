@@ -33,3 +33,25 @@
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
+
+.custom-scroll-bar::-webkit-scrollbar {
+  width: 4px;
+}
+/* Track */
+.custom-scroll-bar::-webkit-scrollbar-track {
+  background: #2e2e2e;
+}
+
+/* Handle */
+.custom-scroll-bar::-webkit-scrollbar-thumb {
+  background: rgb(22, 22, 22);
+}
+
+/* Handle on hover */
+.custom-scroll-bar::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 0, 0);
+}
+
+.react-images__view img {
+  margin: auto;
+}
