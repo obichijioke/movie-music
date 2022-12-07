@@ -2,6 +2,7 @@ import React from "react";
 import WithNavs from "../components/layout/WithNavs";
 import MusicSliderCarousel from "../components/music/MusicSliderCarousel";
 import MusicListItem from "../components/music/MusicListItem";
+import Carousel3D from "../components/3dcarousel/Carousel3D";
 
 const Music = () => {
   return (
@@ -9,7 +10,8 @@ const Music = () => {
       <p>Music</p>
       <div className="flex w-full">
         <div className="w-1/2">
-          <MusicSliderCarousel />
+          <Carousel3D />
+          {/* <MusicSliderCarousel /> */}
         </div>
         <div className="w-1/2">
           <MusicListItem />
