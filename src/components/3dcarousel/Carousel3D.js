@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel } from "3d-react-carousal";
-import "./style.css";
+//import "./style.css";
 
 const Carousel3D = () => {
   let slides = [
@@ -15,7 +15,7 @@ const Carousel3D = () => {
     console.log("callback", index);
   };
   return (
-    <div className="w-full">
+    <div className="w-full h-[500px]">
       <Carousel
         slides={slides}
         //autoplay={true}
