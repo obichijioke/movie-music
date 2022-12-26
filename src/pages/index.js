@@ -3,5 +3,8 @@ import Movie from "./Movie";
 import Music from "./Music";
 import TV from "./TV";
 import MovieDetails from "./MovieDetails";
-
-export { Home, Movie, Music, TV, MovieDetails };
+import Playlist from "./Playlist";
+import Album from "./Album";
+import Song from "./Song";
+import Artist from "./Artist";
+export { Home, Movie, Music, TV, MovieDetails, Playlist, Album, Song, Artist };

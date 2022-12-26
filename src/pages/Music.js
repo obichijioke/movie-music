@@ -7,8 +7,7 @@ import MusicExplore from "../components/music/MusicExplore";
 
 const Music = () => {
   return (
-    <div>
-      <p>Music</p>
+    <div className="p-4">
       <div className="flex w-full relative h-auto">
         <div className="w-1/2 ">
           <Carousel3D />
