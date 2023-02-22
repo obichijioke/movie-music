@@ -3,13 +3,7 @@ import { Carousel } from "3d-react-carousal";
 //import "./style.css";
 
 const Carousel3D = () => {
-  let slides = [
-    <img src="https://picsum.photos/600/500/?random" alt="1" />,
-    <img src="https://picsum.photos/600/500/?random" alt="2" />,
-    <img src="https://picsum.photos/600/500/?random" alt="3" />,
-    <img src="https://picsum.photos/600/500/?random" alt="4" />,
-    <img src="https://picsum.photos/600/500/?random" alt="5" />,
-  ];
+  let slides = [<img src="https://picsum.photos/600/500/?random" alt="1" />];
 
   const callback = function (index) {
     console.log("callback", index);
